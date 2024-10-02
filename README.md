@@ -4,19 +4,20 @@ This is a starter kit for [Spree Commerce](https://spreecommerce.org) - the open
 
 This starter uses:
 
-* Spree Commerce 4.8 which includes Admin Dashboard, API and Storefront
-* Ruby 3.3 and Ruby on Rails 7.1
-* Solid Queue with Mission Control UI (access only to Spree admins) for background jobs
-* Solid Cache for excellent caching and performance
+- Spree Commerce 4.8 which includes Admin Dashboard, API and Storefront
+- Ruby 3.3 and Ruby on Rails 7.1
+- Solid Queue with Mission Control UI (access only to Spree admins) for background jobs
+- Solid Cache for excellent caching and performance
 
 You don't need to install any additional tools or libraries to start developing with Spree Starter. Everything is already set up for you.
 
 ## Installation
 
 Make sure you have the following installed:
-* Docker with Docker Compose - [installation instructions](https://docs.docker.com/get-docker/)
-* Ruby 3.3 - [installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
-* Vips - [installation instructions](https://libvips.github.io/libvips/install.html)
+
+- Docker with Docker Compose - [installation instructions](https://docs.docker.com/get-docker/)
+- Ruby 3.3 - [installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
+- Vips - [installation instructions](https://libvips.github.io/libvips/install.html)
 
 ```bash
 bin/setup
@@ -77,3 +78,15 @@ LoadError: Could not open library 'vips.so.42'
 ```
 
 Please check that libvips is installed with `vips -v`, and if it is not installed, follow [installation instructions here](https://www.libvips.org/install.html).
+
+## RabbitMQ Setup
+
+This application includes a Rake task to initialize the RabbitMQ exchange and queue required for handling order events.
+
+### Setting up RabbitMQ
+
+To set up RabbitMQ for the application, run the following Rake task:
+
+```bash
+rake rabbitmq:setup
+```
