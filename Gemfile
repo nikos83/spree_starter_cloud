@@ -67,6 +67,8 @@ group :test do
   gem "selenium-webdriver"
 end
 
+gem "dotenv", "~> 3.1.4", groups: [:development, :test]
+
 # Use Solid Queue for background jobs
 gem "solid_queue", ">= 0.3.2"
 gem "mission_control-jobs"
@@ -83,6 +85,6 @@ gem "spree_frontend"
 gem "spree_auth_devise"
 gem "spree_gateway"
 gem "spree_i18n"
-
+gem "bunny"
 # only needed for MacOS and Ruby 3.0
 gem 'sassc', github: 'sass/sassc-ruby', branch: 'master'
