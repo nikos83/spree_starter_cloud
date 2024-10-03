@@ -152,6 +152,7 @@ GEM
       devise (>= 2.1.0)
     doorkeeper (5.7.1)
       railties (>= 5)
+    dotenv (3.1.4)
     drb (2.2.1)
     erubi (1.13.0)
     et-orbi (1.2.11)
@@ -559,6 +560,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dotenv (~> 3.1.4)
   image_processing (~> 1.13)
   importmap-rails
   jbuilder
