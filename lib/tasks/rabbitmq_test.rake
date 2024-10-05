@@ -1,20 +1,15 @@
 namespace :rabbitmq do
   desc "Publikuj testową wiadomość do kolejki fulfilled.orders"
   task publish_test_message: :environment do
-    require 'bunny'
-    require 'json'
-
     begin
-      # Połączenie z RabbitMQ
       connection = Bunny.new(ENV['RABBITMQ_URL'] || 'amqp://guest:guest@localhost:5672')
       connection.start
 
       channel = connection.create_channel
       queue = channel.queue('fulfilled.orders')
 
-      # Przykładowa wiadomość w formacie JSON
       message = {
-        number: "RORSEN044191198",
+        number: "R934886488",
         channel: "store",
         shipment_state: "shipped",
         shipping_method: "courier",
@@ -29,7 +24,6 @@ namespace :rabbitmq do
         ]
       }.to_json
 
-      # Publikacja wiadomości do kolejki
       queue.publish(message, persistent: true)
       puts "Wiadomość opublikowana w kolejce 'fulfilled.orders': #{message}"
 
