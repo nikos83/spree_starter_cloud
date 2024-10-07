@@ -56,7 +56,7 @@ GEM
     active_link_to (1.0.5)
       actionpack
       addressable
-    active_storage_validations (1.1.4)
+    active_storage_validations (1.2.0)
       activejob (>= 5.2.0)
       activemodel (>= 5.2.0)
       activestorage (>= 5.2.0)
@@ -178,7 +178,7 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     glyphicons (1.0.2)
-    highline (3.1.0)
+    highline (3.1.1)
       reline
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
@@ -460,9 +460,9 @@ GEM
       stringex
       tracking_number
       validates_zipcode
-    spree_emails (4.9.0)
+    spree_emails (4.10.1)
       actionmailer
-      spree_core (>= 4.9.0)
+      spree_core (>= 4.10.1)
       sprockets (>= 4.0)
     spree_extension (0.1.0)
       activerecord (>= 4.2)
@@ -529,7 +529,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     useragent (0.16.10)
-    validates_zipcode (0.5.2)
+    validates_zipcode (0.5.3)
       activemodel (>= 4.2.0)
     warden (1.2.9)
       rack (>= 2.0.9)
